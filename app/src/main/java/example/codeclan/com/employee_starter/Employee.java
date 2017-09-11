@@ -83,4 +83,10 @@ public class Employee {
         SqlRunner.closeConnection();
     }
 
+    public static void find(String input) {
+        String sql = String.format("SELECT * FROM employees WHERE name = '%s'", input);
+        SqlRunner.executeUpdate(sql);
+        SqlRunner.closeConnection();
+    }
+
 }

@@ -21,5 +21,11 @@ public class Runner {
         Department.all();
         Employee.all();
 
+        employee1.delete();
+        department1.delete();
+
+        Employee.find("Jamie Jones");
+
+
     }
 }

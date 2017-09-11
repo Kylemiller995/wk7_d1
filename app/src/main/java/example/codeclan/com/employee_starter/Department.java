@@ -65,6 +65,12 @@ public class Department {
     }
 
 
+    public static void find(String input) {
+        String sql = String.format("SELECT * FROM departments WHERE title = '%s'", input);
+        SqlRunner.executeUpdate(sql);
+        SqlRunner.closeConnection();
+    }
+
 
 
 
