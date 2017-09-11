@@ -18,5 +18,8 @@ public class Runner {
         employee1.save();
         employee2.save();
 
+        Department.all();
+        Employee.all();
+
     }
 }

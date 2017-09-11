@@ -37,7 +37,7 @@ public class Employee {
     }
 
     public void save() {
-        String sql = String.format("INSERT INTO employees (name, salary, department_id) VALUES ('%s', '%s', %d) ", name, salary, department);
+        String sql = String.format("INSERT INTO employees (name, salary, department_id) VALUES ('%s', %7.2f, %d);", name, salary, department.getId());
         this.id = SqlRunner.executeUpdate(sql);
         SqlRunner.closeConnection();
     }
@@ -78,7 +78,7 @@ public class Employee {
 
 
     public void update(){
-        String sql = String.format("UPDATE employees SET (name, salary, department_id) = ('%s', '%s', '%d') WHERE id = %d;", this.name, this.salary, this.department, this.id);
+        String sql = String.format("UPDATE employees SET (name, salary, department_id) = ('%s', %7.2f, '%d') WHERE id = %d;", this.name, this.salary, this.department.getId(), this.id);
         SqlRunner.executeUpdate(sql);
         SqlRunner.closeConnection();
     }

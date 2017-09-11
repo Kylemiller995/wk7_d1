@@ -25,7 +25,7 @@ public class Department {
     }
 
     public void save() {
-        String sql = String.format("INSERT INTO albums (title) VALUES ('%s');", title);
+        String sql = String.format("INSERT INTO departments (title) VALUES ('%s');", title);
         this.id = SqlRunner.executeUpdate(sql);
         SqlRunner.closeConnection();
     }
